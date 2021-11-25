@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  height: 100vh;
+  background-image: url("https://c.wallhere.com/photos/75/f9/1920x1200_px_animals_Black_Cats_cats-1097571.jpg!d");
+  background-size: cover;
 }
 
 .App-logo {
@@ -35,4 +38,48 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.card-todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0 10px 0;
+  border-right: 2px solid #301B3F;
+  border-radius: 4px;
+}
+
+.form-todo {
+  background-color: #151515;
+}
+
+.text-todo {
+  color: #B4A5A5;
+}
+
+.btn-todo {
+  background-color: #301B3F;
+  color: white
+}
+
+.btn-todo:hover {
+  color:white;
+  background-color: #281735;
+}
+
+.input-text-todo {
+  background-color: #B4A5A5;
+  color: white;
+}
+
+.input-text-todo:hover {
+  background-color: #9b8a8f;
+  
+}
+
+.input-text-todo:focus {
+  background-color: #9b8a8f;
+  color: white;
+ 
 }
