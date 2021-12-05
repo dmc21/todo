@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Form } from './components/Form';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import './App.css';
 
 const App = () => {
@@ -11,6 +13,14 @@ const App = () => {
     let tasksAuxs = [...tasks];
     tasksAuxs.push({ name: name, done: false });
     setTasks(tasksAuxs);
+  }
+
+  const onRemoveTask = (task) => {
+    let tasksAuxs = [...tasks];
+    
+  
+
+    setTasks(tasksAuxs.filter((it) =>  it != task));
   }
 
   return (
@@ -31,8 +41,11 @@ const App = () => {
                       <div className="col-10">
                         <h5 className="text-todo">{task.name}</h5>
                       </div>
+                  
                       <div className="col-2">
-                        <input type="checkbox" className="input-group" onChange={(event) => task.done = event.target.checked}></input>
+                        <button className="btn btn-danger" onClick={(event) => onRemoveTask(task)}>
+                        <FontAwesomeIcon icon={faTrash} />
+                        </button>
                       </div>
                     </div>
                   )
