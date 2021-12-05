@@ -17,9 +17,6 @@ const App = () => {
 
   const onRemoveTask = (task) => {
     let tasksAuxs = [...tasks];
-    
-  
-
     setTasks(tasksAuxs.filter((it) =>  it != task));
   }
 
